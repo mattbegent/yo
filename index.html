@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Yo.js</title>
+
+  <style>
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background-color: #df4949;
+    font-weight: 100;
+    color: #353535;
+  }
+
+  .Title {
+    color: #FFF;
+    font-weight: 100;
+  }
+
+  .Wrapper {
+    width: 100%;
+    max-width: 1280px;
+    margin: 2em auto;
+  }
+
+  .Example {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    font-size: 100px;
+    line-height: 100px;
+    text-decoration: none;
+    padding: 40px;
+    border-radius: 100%;
+    background-color: white;
+    margin: 20px;
+    border: 5px solid #353535; 
+  }
+
+  code {
+    display: block;
+    background-color: white;
+    padding: 1em;
+    text-align: left;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  </style>
+
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,900' rel='stylesheet' type='text/css'>
+  
+</head>
+<body>
+
+  <div class="Wrapper">
+
+    <h1 class="Title">yo.js</h1>
+
+    <div class="Example" data-yo="background-color|yellow|orange|hover">Yo</div>
+    <div class="Example" data-yo="transform|skew(20deg)|skew(-20deg)">Yo</div>
+    <div class="Example" data-yo="transform|perspective(200px) translate3d(0,0,0) rotateX(0) rotateY(0) rotateZ(0)|perspective(200px) translate3d(0,0,-2500px) rotateX(720deg) rotateY(360deg) rotateZ(-360deg)|hover|1000ms ease-in-out">Yo</div> 
+    <div class="Example" data-yo="opacity|0.5|1">Yo</div>
+    <div class="Example" data-yo="transform|scale(1)|scale(1.5)">Yo</div>
+    <div class="Example" data-yo="transform|scale3d(1, 1, 1)|scale3d(2.5, 1.2, 0.3)">Yo</div>
+    <div class="Example" data-yo="transform|translateX(10px) rotate(10deg) translateY(5px)|translateX(15px) rotate(90deg) translateY(21px)">Yo</div>
+    <div class="Example" data-yo="border-radius|0 100%|100% 0">Yo</div>
+    <div class="Example" data-yo="border|5px solid #353535|20px dashed orange">Yo</div>
+    <div class="Example" data-yo="-webkit-filter|blur(10px)|blur(0px)">Yo</div>
+
+    <h3 class="Title">Le Code</h3>
+    <code>
+        !function(t){for(var e=t.styleSheets[0],r=t.querySelectorAll(&quot;[data-yo]&quot;),l=0;l&lt;r.length;l++){for(var n=r[l].getAttribute(&quot;data-yo&quot;).split(&quot;|&quot;),o=n[0],i=n[1],a=n[2],s=n[3]||&quot;hover&quot;,u=n[4]||&quot;.3s&quot;,d=o,y=1;t.getElementById(d);)d=o+ ++y;r[l].id=d,e.insertRule(&quot;#&quot;+d+&quot;:&quot;+s+&quot;{&quot;+o+&quot;:&quot;+a+&quot;}&quot;,0),e.insertRule(&quot;#&quot;+d+&quot;{transition:&quot;+o+&quot; &quot;+u+&quot;;&quot;+o+&quot;:&quot;+i+&quot;}&quot;,0)}}(document);
+    </code>
+
+  </div>
+
+
+<script src="yo.js"></script>
+
+</body>
+</html>
