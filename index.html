@@ -14,6 +14,10 @@
     color: #353535;
   }
 
+  p {
+    color: #FFF;
+  }
+
   .Title {
     color: #FFF;
     font-weight: 100;
@@ -58,6 +62,7 @@
   <div class="Wrapper">
 
     <h1 class="Title">yo.js</h1>
+    <p>A tiny 360 bytes transition library</p>
 
     <div class="Example" data-yo="background-color|yellow|orange|hover">Yo</div>
     <div class="Example" data-yo="transform|skew(20deg)|skew(-20deg)">Yo</div>
@@ -69,6 +74,11 @@
     <div class="Example" data-yo="border-radius|0 100%|100% 0">Yo</div>
     <div class="Example" data-yo="border|5px solid #353535|20px dashed orange">Yo</div>
     <div class="Example" data-yo="-webkit-filter|blur(10px)|blur(0px)">Yo</div>
+
+    <h3 class="Title">Options</h3>
+    <code>
+        &lt;div data-yo=&quot;{{property}}|{{start value}}|{{end value}}|{{event}}|{{transition options}}&quot;&gt;Yo&lt;/div&gt;
+    </code>
 
     <h3 class="Title">Le Code</h3>
     <code>
